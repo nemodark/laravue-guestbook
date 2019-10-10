@@ -61,7 +61,7 @@ export default {
         }
     },
     created() {
-        this.axios.get(`http://guest-book.test/api/guests/edit/${this.$route.params.id}`)
+        this.axios.get(`/api/guests/edit/${this.$route.params.id}`)
             .then((response) => {
                 this.guest = response.data;
                 this.guest.gender = response.data.gender;
@@ -71,7 +71,7 @@ export default {
     },
     methods: {
         updateGuest() {
-            this.axios.put(`http://guest-book.test/api/guests/update/${this.$route.params.id}`, this.guest)
+            this.axios.put(`/api/guests/update/${this.$route.params.id}`, this.guest)
                 .then(response => {
                     this.allerrors = [];
                     this.guest.firstname = '';

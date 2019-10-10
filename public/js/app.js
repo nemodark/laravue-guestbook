@@ -1937,7 +1937,7 @@ __webpack_require__.r(__webpack_exports__);
     addGuest: function addGuest() {
       var _this = this;
 
-      this.axios.post("http://guest-book.test/api/guests/add", this.guest).then(function (response) {
+      this.axios.post("/api/guests/add", this.guest).then(function (response) {
         _this.allerrors = [];
         _this.guest.firstname = '';
         _this.guest.lastname = '';
@@ -2049,7 +2049,7 @@ __webpack_require__.r(__webpack_exports__);
   created: function created() {
     var _this = this;
 
-    this.axios.get("http://guest-book.test/api/guests/edit/".concat(this.$route.params.id)).then(function (response) {
+    this.axios.get("/api/guests/edit/".concat(this.$route.params.id)).then(function (response) {
       _this.guest = response.data;
       _this.guest.gender = response.data.gender;
       _this.defaultCountry = response.data.country_code;
@@ -2059,7 +2059,7 @@ __webpack_require__.r(__webpack_exports__);
     updateGuest: function updateGuest() {
       var _this2 = this;
 
-      this.axios.put("http://guest-book.test/api/guests/update/".concat(this.$route.params.id), this.guest).then(function (response) {
+      this.axios.put("/api/guests/update/".concat(this.$route.params.id), this.guest).then(function (response) {
         _this2.allerrors = [];
         _this2.guest.firstname = '';
         _this2.guest.lastname = '';
@@ -2171,7 +2171,7 @@ __webpack_require__.r(__webpack_exports__);
 
     this.loading = true;
     this.content = false;
-    this.axios.get("http://guest-book.test/api/guests").then(function (response) {
+    this.axios.get("/api/guests").then(function (response) {
       _this.content = true;
       _this.loading = false;
       _this.guests = response.data;
@@ -2191,7 +2191,7 @@ __webpack_require__.r(__webpack_exports__);
       var data = {
         id: this.id
       };
-      this.axios["delete"]("http://guest-book.test/api/guests/delete/".concat(this.id), data).then(function (response) {
+      this.axios["delete"]("/api/guests/delete/".concat(this.id), data).then(function (response) {
         _this2.success = true;
         _this2.id = '';
         _this2.firstname = '';
@@ -2214,7 +2214,7 @@ __webpack_require__.r(__webpack_exports__);
 
       this.loading = true;
       this.content = false;
-      this.axios.get("http://guest-book.test/api/guests").then(function (response) {
+      this.axios.get("/api/guests").then(function (response) {
         _this3.content = true;
         _this3.loading = false;
         _this3.guests = response.data;
@@ -93841,15 +93841,14 @@ __webpack_require__.r(__webpack_exports__);
 /*!********************************************!*\
   !*** ./resources/js/components/Guests.vue ***!
   \********************************************/
-/*! no static exports found */
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Guests_vue_vue_type_template_id_1304f646___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Guests.vue?vue&type=template&id=1304f646& */ "./resources/js/components/Guests.vue?vue&type=template&id=1304f646&");
 /* harmony import */ var _Guests_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Guests.vue?vue&type=script&lang=js& */ "./resources/js/components/Guests.vue?vue&type=script&lang=js&");
-/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _Guests_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _Guests_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__[key]; }) }(__WEBPACK_IMPORT_KEY__));
-/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
 
@@ -93879,7 +93878,7 @@ component.options.__file = "resources/js/components/Guests.vue"
 /*!*********************************************************************!*\
   !*** ./resources/js/components/Guests.vue?vue&type=script&lang=js& ***!
   \*********************************************************************/
-/*! no static exports found */
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

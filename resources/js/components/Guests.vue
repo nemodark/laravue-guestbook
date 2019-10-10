@@ -67,7 +67,7 @@ export default {
     created() {
         this.loading = true;
         this.content = false;
-        this.axios.get("http://guest-book.test/api/guests").then(response => {
+        this.axios.get("/api/guests").then(response => {
             this.content = true;
             this.loading = false;
             this.guests = response.data;
@@ -83,7 +83,7 @@ export default {
         removeGuest(e) {
             e.preventDefault();
             let data = {id: this.id};
-            this.axios.delete(`http://guest-book.test/api/guests/delete/${this.id}`, data)
+            this.axios.delete(`/api/guests/delete/${this.id}`, data)
                 .then(response => {
                     this.success = true;
                     this.id = '';
@@ -103,7 +103,7 @@ export default {
         reload() {
             this.loading = true;
             this.content = false;
-            this.axios.get("http://guest-book.test/api/guests").then(response => {
+            this.axios.get("/api/guests").then(response => {
             this.content = true;
             this.loading = false;
             this.guests = response.data;

@@ -62,7 +62,7 @@ export default {
     },
     methods: {
         addGuest() {
-            this.axios.post("http://guest-book.test/api/guests/add", this.guest)
+            this.axios.post("/api/guests/add", this.guest)
                 .then(response => {
                     this.allerrors = [];
                     this.guest.firstname = '';
